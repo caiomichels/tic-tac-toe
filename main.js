@@ -109,7 +109,7 @@ const tie = () => {
 
 Array.from(btnList).forEach((btn, index) => {
   btn.addEventListener('click', () => {
-    if (pause) return;
+    if (pause || btn.textContent != ' ') return;
 
     roundChar = round ? 'O' : 'X';
     board = replaceAt(board, roundChar, index);
